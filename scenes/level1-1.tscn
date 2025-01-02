@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7smpktkucn2d"]
+
+[ext_resource type="Texture2D" uid="uid://ckgtpmcrsc3n8" path="res://sprites/Super Mario Bros World 1-1.png" id="1_0hy7w"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="SuperMarioBrosWorld1-1" type="Sprite2D" parent="."]
+position = Vector2(1688, 240)
+texture = ExtResource("1_0hy7w")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
