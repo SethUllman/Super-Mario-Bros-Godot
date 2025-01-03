@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://6h8c37kj06lv"]
+
+[ext_resource type="Texture2D" uid="uid://gxify3snahgn" path="res://sprites/Super Mario Bros Mario & Luigi.png" id="1_sswpc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4oxlh"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uimo"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(20, 8, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esllv"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(38, 8, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqv86"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(56, 8, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qipph"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(0, 8, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyo06"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uimo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esllv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqv86")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qipph")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(8, 8)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_4oxlh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_qyo06")
+animation = &"new_animation"
+frame_progress = 0.543536
