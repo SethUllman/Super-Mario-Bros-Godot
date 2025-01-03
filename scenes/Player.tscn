@@ -1,9 +1,45 @@
-[gd_scene load_steps=8 format=3 uid="uid://6h8c37kj06lv"]
+[gd_scene load_steps=21 format=3 uid="uid://6h8c37kj06lv"]
 
 [ext_resource type="Texture2D" uid="uid://gxify3snahgn" path="res://sprites/Super Mario Bros Mario & Luigi.png" id="1_sswpc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4oxlh"]
 size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5qsp"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(76, 8, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0me8v"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(76, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_203wv"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(116, 40, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00h8f"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(116, 8, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nibcc"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(0, 88, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3y3u"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(18, 80, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqwf3"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(36, 72, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t52v"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(96, 8, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui76v"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(56, 72, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4uimo"]
 atlas = ExtResource("1_sswpc")
@@ -17,12 +53,90 @@ region = Rect2(38, 8, 16, 16)
 atlas = ExtResource("1_sswpc")
 region = Rect2(56, 8, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_auic4"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(20, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsnj8"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(38, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eut2s"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(56, 32, 16, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_qipph"]
 atlas = ExtResource("1_sswpc")
 region = Rect2(0, 8, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qu84e"]
+atlas = ExtResource("1_sswpc")
+region = Rect2(0, 32, 16, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_qyo06"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5qsp")
+}],
+"loop": true,
+"name": &"change_direction",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0me8v")
+}],
+"loop": true,
+"name": &"change_direction_big",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_203wv")
+}],
+"loop": true,
+"name": &"crouch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00h8f")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nibcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3y3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqwf3")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7t52v")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ui76v")
+}],
+"loop": true,
+"name": &"jump_big",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4uimo")
@@ -34,7 +148,35 @@ animations = [{
 "texture": SubResource("AtlasTexture_sqv86")
 }],
 "loop": true,
-"name": &"new_animation",
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auic4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsnj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eut2s")
+}],
+"loop": true,
+"name": &"run_big",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqwf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3y3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nibcc")
+}],
+"loop": true,
+"name": &"shrink",
 "speed": 5.0
 }, {
 "frames": [{
@@ -43,6 +185,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qu84e")
+}],
+"loop": true,
+"name": &"stand_big",
 "speed": 5.0
 }]
 
@@ -57,5 +207,4 @@ shape = SubResource("RectangleShape2D_4oxlh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_qyo06")
-animation = &"new_animation"
-frame_progress = 0.543536
+animation = &"crouch"
